@@ -1,0 +1,74 @@
+Get Request Urls:
+-----------------
+/employees
+/employees/{empId}
+/employees/{empId}
+/findAllByNameAsc
+/findAllByNameDesc
+/findAllByLengthOfName
+
+Post Request Urls:
+----------------
+Request 1: http:localhost:9090/employees
+{
+	"empName":"Sudarshan",
+	"empDob":"1994-01-01T00:00:00.000+0000",
+	"empEmail":"sudarshan@gmail.com",
+	"empExperience":"2"
+	
+}
+
+Request 2: /validateEmail
+{
+	"empName":"sudarshan"
+}
+
+
+Request 3: /validateEmailAndName
+{
+	
+	"empEmail":"sudarshan@gmail.com",
+	"empName":"sudarshan"
+}
+
+Request 4: /employeesByDob
+{
+	"empDob":"1994-01-01T00:00:00.000+0000"
+}
+
+Request 5: /employeesByEmailIds
+{
+  "employees":[{
+  	"empEmail":"sudarshan@gmail.com"
+  },{
+  	"empEmail":"john@gmail.com"
+  }]
+}
+
+Request 6: /findAllEmployeesWithPagination
+{
+	"empName":"Sudarshan"	
+}
+
+Request 7: /employeesByNames
+{
+  "employees":[{
+  	"empName":"Sudarshan"
+  },{
+  	"empName":"John Ceena"
+  }]
+}
+
+Request 8: /updateEmployeeExp
+{
+	"empName":"Sudarshan",
+	"empExperience":"4.5"
+}
+
+Request 9: /insertEmployee
+{
+	"empName":"Sachin",
+	"empDob":"1988-01-01T01:12:00.000+0000",
+	"empEmail":"sachin@gmail.com",
+	"empExperience": "8"
+}
